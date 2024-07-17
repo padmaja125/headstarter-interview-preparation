@@ -1,0 +1,46 @@
+# For this mock interview, you will go through four phases: Prompt, Plan, Code, & Test.
+# Prompt: Understand the problem.
+# Plan: Outline your approach.
+# Code: Implement your solution.
+# Test: Verify your solution works.
+
+# Here is the problem that you will be solving:
+# Given an array length 1 or more of ints, return the difference between the largest and smallest values in the array. 
+
+# biggest_diff([10, 3, 5, 6]) → 7
+# biggest_diff([7, 2, 10, 9]) → 8
+# biggest_diff([2, 10, 7, 2]) → 8
+
+def biggest_diff(nums):
+
+
+    # Write your plan below
+    #max in array
+    #min in array
+    #difference between them
+    #
+
+# finding max is the largest value in the array and min is the minium value in the array. finding through inbuild functionality reduces the time. difference between largest and smallest value is the goal
+    # Write your code below
+    # one way
+    diffNum = 0; #S(1)
+    if(len(nums) > 1): # O(1)
+        maxNum = max(nums); #O(n) S(1)
+        minNum = min(nums); #O(n) S(1)
+        diffNum = maxNum - minNum; 
+        return diffNum;
+    elif(len(nums) == 1):
+        diffNum = nums[0]
+        return diffNum
+    else:
+        return diffNum;
+
+    # S - space comp that is 1. where as O - time is O(n)
+# testcase
+
+def test_case(self):
+    self.assertEqual(biggest_diff([10, 3, 5, 6]), 7)
+    self.assertEqual(biggest_diff([7, 2, 10, 9]), 8)
+    self.assertEqual(biggest_diff([2, 10, 7, 2]), 8)
+    self.assertEqual(biggest_diff([]),0)
+    self.assertEqual(biggest_diff([3],3))
